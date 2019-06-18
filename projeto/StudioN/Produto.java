@@ -44,23 +44,23 @@ public class Produto extends Fotografo {
 		this.PrecoHora = precoHora;
 	}
 	public String getQuantFotos() {
-		return QuantFotos;
+		return this.QuantFotos;
 	}
 
 	public void setQuantFotos(String quantFotos) {
-		QuantFotos = quantFotos;
+		this.QuantFotos = quantFotos;
 	}
 
 	public String getHoras() {
-		return Horas;
+		return this.Horas;
 	}
 
 	public void setHoras(String horas) {
-		Horas = horas;
+		this.Horas = horas;
 	}
 	
+	public void ExibirDadosIniciai
 	public void CalcularPrecoFinal () {
 		
 	}
-	
 }

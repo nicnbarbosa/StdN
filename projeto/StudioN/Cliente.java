@@ -13,14 +13,23 @@ public class Cliente extends Pessoa {
 	}
 
 	public String getCodCliente() {
-		return CodCliente;
+		return this.CodCliente;
 	}
 
 	public void setCodCliente(String codCliente) {
-		CodCliente = codCliente;
+		this.CodCliente = codCliente;
 	}
 
-	public void ExibirDadosCliente () {
+	public void ExibirDadosCliente() {
+		System.out.println("========================================");
+		System.out.println("CLIENTE");
+		System.out.println("----------------------------------------");
+		System.out.println("Nome: " + this.getNome());
+		System.out.println("Telefone: " + this.getTelefone());
+		System.out.println("Email: " + this.getEmail());
+		System.out.println("CPF: " + this.getCPF());
+		System.out.println("RG: " + this.getRG());
+		System.out.println("Código: " + this.getCodCliente());
 		
 	}
 	

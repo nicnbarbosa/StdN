@@ -18,15 +18,15 @@ public class Pessoa {
 		this.setEmail(email);
 		this.setCPF(cpf);
 		this.setRG(rg);
-		
+
 	}
 
 	public String getRG() {
-		return RG;
+		return this.RG;
 	}
 
 	public void setRG(String rg) {
-		RG = rg;
+		this.RG = rg;
 	}
 
 	public String getNome() {
@@ -60,9 +60,5 @@ public class Pessoa {
 	public void setCPF(String cpf) {
 		this.CPF = cpf;
 	}
-	
-	public void ExibirDadosPessoa () {
-		
-	}
-	
+
 }
