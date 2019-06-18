@@ -61,5 +61,8 @@ public class Pessoa {
 		this.CPF = cpf;
 	}
 	
+	public void ExibirDadosPessoa () {
+		
+	}
 	
 }

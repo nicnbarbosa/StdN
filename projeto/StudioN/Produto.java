@@ -5,15 +5,19 @@ public class Produto extends Fotografo {
 	private String PrecoFoto;
 	private String PrecoHora;
 	private String PrecoFinal;
-	private String a;
+	private String QuantFotos;
+	private String Horas;
 	
 	public Produto () {
 		super();
 	}
 	
-	public Produto (String precoFoto, String precoHora, String precoFinal) {
+	public Produto (String precoFoto, String precoHora, String precoFinal, String quantFotos, String horas) {
 		this.setPrecoFoto(precoFoto);
 		this.setPrecoHora(precoHora);
+		this.setPrecoFinal(precoFinal);
+		this.setQuantFotos(quantFotos);
+		this.setHoras(horas);
 	}
 
 	public String getPrecoFinal() {
@@ -39,4 +43,24 @@ public class Produto extends Fotografo {
 	public void setPrecoHora(String precoHora) {
 		this.PrecoHora = precoHora;
 	}
+	public String getQuantFotos() {
+		return QuantFotos;
+	}
+
+	public void setQuantFotos(String quantFotos) {
+		QuantFotos = quantFotos;
+	}
+
+	public String getHoras() {
+		return Horas;
+	}
+
+	public void setHoras(String horas) {
+		Horas = horas;
+	}
+	
+	public void CalcularPrecoFinal () {
+		
+	}
+	
 }

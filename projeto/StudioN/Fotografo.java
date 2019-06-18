@@ -62,5 +62,7 @@ public class Fotografo extends Pessoa {
 		this.HorasTrabalhadas = horasTrabalhadas;
 	}
 
-	
+	public void ExibirDadosFotografo () {
+		
+	}
 }
