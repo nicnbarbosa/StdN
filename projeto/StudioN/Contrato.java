@@ -1,23 +1,11 @@
 package StudioN;
 
-public class Contrato {
+public class Contrato extends Produto {
 
-	private String PrecoFinal;
 	
 	public Contrato () {
-		
+		super();
 	}
 	
-	public Contrato (String precoFinal) {
-		this.setPrecoFinal(precoFinal);
-	}
-
-	public String getPrecoFinal() {
-		return this.PrecoFinal;
-	}
-
-	public void setPrecoFinal(String precoFinal) {
-		this.PrecoFinal = precoFinal;
-	}
 	
 }

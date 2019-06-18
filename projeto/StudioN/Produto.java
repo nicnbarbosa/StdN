@@ -1,18 +1,27 @@
 package StudioN;
 
-public class Produto {
+public class Produto extends Fotografo {
 
 	private String PrecoFoto;
 	private String PrecoHora;
-	private String 
+	private String PrecoFinal;
+	private String a;
 	
 	public Produto () {
-		
+		super();
 	}
 	
-	public Produto (String precoFoto, String precoHora) {
+	public Produto (String precoFoto, String precoHora, String precoFinal) {
 		this.setPrecoFoto(precoFoto);
 		this.setPrecoHora(precoHora);
+	}
+
+	public String getPrecoFinal() {
+		return this.PrecoFinal;
+	}
+
+	public void setPrecoFinal(String precoFinal) {
+		this.PrecoFinal = precoFinal;
 	}
 
 	public String getPrecoFoto() {
