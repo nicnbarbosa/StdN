@@ -6,17 +6,27 @@ public class Pessoa {
 	private String Telefone;
 	private String Email;
 	private String CPF;
+	private String RG;
 
 	public Pessoa() {
 
 	}
 
-	public Pessoa(String nome, String tel, String email, String cpf) {
+	public Pessoa(String nome, String tel, String email, String cpf, String rg) {
 		this.setNome(nome);
 		this.setTelefone(tel);
 		this.setEmail(email);
 		this.setCPF(cpf);
+		this.setRG(rg);
 		
+	}
+
+	public String getRG() {
+		return RG;
+	}
+
+	public void setRG(String rg) {
+		RG = rg;
 	}
 
 	public String getNome() {
