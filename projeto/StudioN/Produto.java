@@ -5,12 +5,12 @@ public class Produto extends Fotografo {
 	private double PrecoFinal;
 	private int QuantFotos;
 	private int Horas;
-	
-	public Produto () {
+
+	public Produto() {
 		super();
 	}
-	
-	public Produto (double precoFinal, int quantFotos, int horas) {
+
+	public Produto(double precoFinal, int quantFotos, int horas) {
 		this.setPrecoFinal(precoFinal);
 		this.setQuantFotos(quantFotos);
 		this.setHoras(horas);
@@ -39,19 +39,10 @@ public class Produto extends Fotografo {
 	public void setHoras(int horas) {
 		this.Horas = horas;
 	}
-	
-	public void ExibirDadosProduto () {
-		System.out.println("Quantidade de fotos: " + this.QuantFotos);
-		System.out.println("Horas usadas: " + this.Horas);
+
+	public void CalcularPrecoFinal(double precoFoto, double precoHora, double quantFotos, int horas) {
+		double precoFinal = (precoFoto * quantFotos) + (precoHora * horas);
+		this.PrecoFinal = precoFinal;
 	}
-	
-	public double CalcularPrecoFinal (double precoFoto, double precoHora, double quantFotos, int horas) {
-		double precoFinal = (precoFoto * quantFotos) + (precoHora * horas);	
-		return precoFinal;
-	}
-	
-	public void ExibirPrecoFinal () {
-		System.out.println("PREÇO FINAL -----> " + this.PrecoFinal);
-	}
-	
+
 }

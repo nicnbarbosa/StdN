@@ -1,5 +1,7 @@
 package StudioN;
 
+import java.util.Scanner;
+
 public class Cliente extends Pessoa {
 
 	private int CodCliente;
@@ -28,6 +30,52 @@ public class Cliente extends Pessoa {
 		System.out.println("CPF: " + this.getCPF());
 		System.out.println("Código: " + this.getCodCliente());
 		System.out.println();
+	}
+
+	public void CadastroCliente() {
+		Scanner dado = new Scanner(System.in);
+		String nomeC;
+		String telC;
+		String emailC;
+		String cpfC;
+		int codC;
+
+		System.out.println("|============================================|");
+		System.out.println("|            CADASTRO CLIENTE                |");
+		System.out.println();
+		System.out.println("|--------------------------------------------|");
+		System.out.println("| Informe seu nome: ");
+		System.out.println("|--------------------------------------------|");
+		nomeC = dado.nextLine();
+		System.out.println();
+		System.out.println("|--------------------------------------------|");
+		System.out.println("| Informe seu telefone: ");
+		System.out.println("|--------------------------------------------|");
+		telC = dado.nextLine();
+		System.out.println();
+		System.out.println("|--------------------------------------------|");
+		System.out.println("| Informe seu email: ");
+		System.out.println("|--------------------------------------------|");
+		emailC = dado.nextLine();
+		System.out.println();
+		System.out.println("|--------------------------------------------|");
+		System.out.println("| Informe seu CPF: ");
+		System.out.println("|--------------------------------------------|");
+		cpfC = dado.nextLine();
+		System.out.println();
+		System.out.println("|--------------------------------------------|");
+		System.out.println("| Informe seu código: ");
+		System.out.println("|--------------------------------------------|");
+		codC = dado.nextInt();
+		System.out.println();
+		System.out.println("|============================================|");
+		System.out.println();
+		
+		this.setNome(nomeC);
+		this.setTelefone(telC);
+		this.setEmail(emailC);
+		this.setCPF(cpfC);
+		this.setCodCliente(codC);
 	}
 
 }
