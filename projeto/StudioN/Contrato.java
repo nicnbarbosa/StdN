@@ -47,7 +47,7 @@ public class Contrato {
 		System.out.println("------------------------------------------------");
 		System.out.println("FOTÓGRAFO                                       ");
 		System.out.println();
-		System.out.println(fotografo.);
+		System.out.println(fotografo.ExibirDadosFotografo());
 		System.out.println("------------------------------------------------");
 		System.out.println("CLIENTE                                         ");
 		System.out.println();
