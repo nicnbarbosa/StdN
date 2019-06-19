@@ -4,24 +4,26 @@ import java.util.ArrayList;
 
 public class Fotografo extends Pessoa {
 
-	private String CodFotografo;
+	private int CodFotografo;
 	private ArrayList<String> Modalidades;
-	private String HistoricoProjetos;
-	private String HorasTrabalhadas;
+	private int HistoricoProjetos;
+	private int HorasTrabalhadas;
 	private ArrayList<String> DiasDaSemanaDisponiveis;
-	private String PrecoFoto;
-	private String PrecoHora;
+	private double PrecoFoto;
+	private double PrecoHora;
+	private Produto produto;
 
 	public Fotografo() {
 		super();
 	}
 
-	public Fotografo(String codFoto, ArrayList<String> modalidades, String projetos, String horas, ArrayList<String> dias) {
+	public Fotografo(Produto produto, int codFoto, ArrayList<String> modalidades, int projetos, int horas, ArrayList<String> dias) {
 		this.setCodFotografo(codFoto);
 		this.setModalidades(modalidades);
 		this.setHistoricoProjetos(projetos);
 		this.setHorasTrabalhadas(horas);
 		this.setDiasDaSemanaDisponiveis(dias);
+		this.setProduto(produto);
 	}
 
 	public ArrayList<String> getDiasDaSemanaDisponiveis() {
@@ -32,11 +34,11 @@ public class Fotografo extends Pessoa {
 		this.DiasDaSemanaDisponiveis = diasDaSemanaDisponiveis;
 	}
 
-	public String getCodFotografo() {
+	public int getCodFotografo() {
 		return this.CodFotografo;
 	}
 
-	public void setCodFotografo(String codFoto) {
+	public void setCodFotografo(int codFoto) {
 		this.CodFotografo = codFoto;
 	}
 
@@ -48,34 +50,34 @@ public class Fotografo extends Pessoa {
 		this.Modalidades = modalidades;
 	}
 
-	public String getHistoricoProjetos() {
+	public int getHistoricoProjetos() {
 		return this.HistoricoProjetos;
 	}
 
-	public void setHistoricoProjetos(String historicoProjetos) {
+	public void setHistoricoProjetos(int historicoProjetos) {
 		this.HistoricoProjetos = historicoProjetos;
 	}
 
-	public String getHorasTrabalhadas() {
+	public int getHorasTrabalhadas() {
 		return this.HorasTrabalhadas;
 	}
 
-	public void setHorasTrabalhadas(String horasTrabalhadas) {
+	public void setHorasTrabalhadas(int horasTrabalhadas) {
 		this.HorasTrabalhadas = horasTrabalhadas;
 	}
-	public String getPrecoFoto() {
+	public double getPrecoFoto() {
 		return this.PrecoFoto;
 	}
 
-	public void setPrecoFoto(String precoFoto) {
+	public void setPrecoFoto(double precoFoto) {
 		this.PrecoFoto = precoFoto;
 	}
 
-	public String getPrecoHora() {
+	public double getPrecoHora() {
 		return this.PrecoHora;
 	}
 
-	public void setPrecoHora(String precoHora) {
+	public void setPrecoHora(double precoHora) {
 		this.PrecoHora = precoHora;
 	}
 
@@ -91,6 +93,14 @@ public class Fotografo extends Pessoa {
 		System.out.println("Dias da semana disponíveis: " + this.getDiasDaSemanaDisponiveis());
 		System.out.println();
 		
+	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
 	}
 
 }

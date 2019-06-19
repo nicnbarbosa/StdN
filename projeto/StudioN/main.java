@@ -3,17 +3,24 @@ package StudioN;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Date;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public class main {
 
-
 	static Fotografo fotografo;
+
 	static Cliente cliente;
 	static Produto produto;
 	static Contrato contrato;
 	static Date data;
-    static Scanner dado = new Scanner(System.in);
-	
+	static Scanner dado = new Scanner(System.in);
+
+	private static int op;
+
 	public static void main(String[] args) {
 
 		fotografo = new Fotografo();
@@ -21,17 +28,34 @@ public class main {
 		produto = new Produto();
 		contrato = new Contrato();
 		data = new Date();
-		
+		System.out.println("===============================+");
+		System.out.println("1. Cadastrar Fotógrafo         +");
+		System.out.println("2. Cadastrar Cliente           +");
+		System.out.println("3. Efetuar Compra do Pacote    +");
+		System.out.println("4. Mostrar contrato            +");
+		System.out.println("===============================+");
+
+		op = dado.nextInt();
+		System.out.println();
+
+		if (op == 1) {
+			CadastroFotografo();
+		} else if (op == 2) {
+			CadastroCliente();
+		} else if (op == 3) {
+			EfetuarCompra();
+		}
 		CadastroCliente();
 		CadastroFotografo();
 		Contrato(contrato, fotografo, cliente, produto, data);
 	}
-	
+
+	// ===================================================================================================================================//
 	private static String nomeC;
 	private static String telC;
 	private static String emailC;
 	private static String cpfC;
-	private static String codC;
+	private static int codC;
 
 	public static void CadastroCliente() {
 
@@ -53,7 +77,7 @@ public class main {
 		cpfC = dado.nextLine();
 		System.out.println();
 		System.out.println("Informe seu código: ");
-		codC = dado.nextLine();
+		codC = dado.nextInt();
 		System.out.println();
 		System.out.println("============================================");
 
@@ -76,7 +100,6 @@ public class main {
 		System.out.println("- CPF: " + cliente.getCPF());
 		System.out.println("- Código: " + cliente.getCodCliente());
 
-	
 	}
 
 	// ===================================================================================================================================//
@@ -84,14 +107,13 @@ public class main {
 	private static String telF;
 	private static String emailF;
 	private static String cpfF;
-	private static String codF;
+	private static int codF;
 	private static ArrayList<String> modalidades = new ArrayList<String>();
 	private static ArrayList<String> diasDisponiveis = new ArrayList<String>();
-	private static String historicoProjetos;
-	private static String horasTrabalhadas;
-	private static String precoFoto;
-	private static String precoHora;
-	
+	private static int historicoProjetos;
+	private static int horasTrabalhadas;
+	private static double precoFoto;
+	private static double precoHora;
 
 	public static void CadastroFotografo() {
 
@@ -120,7 +142,7 @@ public class main {
 		System.out.println();
 		System.out.println("--------------------------------------------");
 		System.out.println("Informe seu código: ");
-		codF = dado.nextLine();
+		codF = dado.nextInt();
 		System.out.println();
 		System.out.println("--------------------------------------------");
 		System.out.println("Informe quantas são as suas especializações:");
@@ -144,11 +166,11 @@ public class main {
 		System.out.println();
 		System.out.println("--------------------------------------------");
 		System.out.println("Informe o preço por foto cobrado: ");
-		precoFoto = dado.nextLine();
+		precoFoto = dado.nextDouble();
 		System.out.println();
 		System.out.println("--------------------------------------------");
 		System.out.println("Informe o preço por hora cobrado: ");
-		precoHora = dado.nextLine();
+		precoHora = dado.nextDouble();
 		System.out.println();
 		System.out.println("============================================");
 
@@ -180,34 +202,73 @@ public class main {
 	}
 
 	// ===================================================================================================================================//
-	private static String quantFotos;
-	private static String horasUsadas;
-	
-	public static void DadosProduto () {
-		
-		System.out.println("Dados para o pacote");
+	private static int quantFotos;
+	private static int horasUsadas;
+
+	public static void EfetuarCompra() {
+
+		int op;
+		System.out.println();
+		System.out.println("Informe os dados para efetuar a compra do pacote: ");
 		System.out.println();
 		System.out.println("- Quantidade de fotos: ");
-		quantFotos = dado.nextLine();
+		quantFotos = dado.nextInt();
 		System.out.println("- Horas usadas para a sessão: ");
-		horasUsadas = dado.nextLine();
-		
+		horasUsadas = dado.nextInt();
+
 		produto = new Produto();
 		produto.setQuantFotos(quantFotos);
 		produto.setHoras(horasUsadas);
-		
+
 		System.out.println("DADOS CADASTRADOS");
 		System.out.println();
 		System.out.println("- Quantidade de fotos: " + produto.getQuantFotos());
 		System.out.println("- Horas usadas para a sessão: " + produto.getHoras());
+		
+		System.out.println("Gostaria de efetuar a compra do pacote? ");
+		System.out.println("1. Sim");
+		System.out.println("2. Não");
+		if (op == 1) {
+			
+		}
+		else if (op == 2) {
+			
+		}
+		System.out.println();
 	}
-	
+
 	// ===================================================================================================================================//
-	
 
 	public static void Contrato(Contrato cn, Fotografo f, Cliente cl, Produto p, Date d) {
-		
+
 		cn.DadosContrato(f, cl, p, d);
 	}
-	
+
+	static FileWriter arquivofisico;
+	static PrintWriter arquivologico;
+	static FileReader arqLeiFisico;
+	static BufferedReader arqLeiLogico;
+
+	public static void ArquivoTxtContrato () throws Exception {
+		FileReader arqLeiFisico = new FileReader("arquivo.txt");
+		BufferedReader arqLeiLogico = new BufferedReader (arqLeiFisico);
+		
+		String linha;
+		linha = arqLeiLogico.readLine();
+		while (!linha.trim().isEmpty()){
+		     System.out.println(linha);
+		     linha = arqLeiLogico.readLine();
+		}
+		
+		for (int i = 0, i <  ; i++) {
+			
+		}
+		
+		
+		FileWriter arquivofisico = new FileWriter ("arquivo.txt");
+		PrintWriter arquivologico = new PrintWriter(arquivofisico);
+		
+		
+	}
+
 }

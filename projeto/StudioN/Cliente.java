@@ -2,21 +2,21 @@ package StudioN;
 
 public class Cliente extends Pessoa {
 
-	private String CodCliente;
+	private int CodCliente;
 
 	public Cliente() {
 		super();
 	}
 
-	public Cliente(String codCliente) {
+	public Cliente(int codCliente) {
 		this.setCodCliente(codCliente);
 	}
 
-	public String getCodCliente() {
+	public int getCodCliente() {
 		return this.CodCliente;
 	}
 
-	public void setCodCliente(String codCliente) {
+	public void setCodCliente(int codCliente) {
 		this.CodCliente = codCliente;
 	}
 

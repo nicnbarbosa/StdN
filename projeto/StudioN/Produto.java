@@ -2,41 +2,41 @@ package StudioN;
 
 public class Produto extends Fotografo {
 
-	private String PrecoFinal;
-	private String QuantFotos;
-	private String Horas;
+	private double PrecoFinal;
+	private int QuantFotos;
+	private int Horas;
 	
 	public Produto () {
 		super();
 	}
 	
-	public Produto (String precoFinal, String quantFotos, String horas) {
+	public Produto (double precoFinal, int quantFotos, int horas) {
 		this.setPrecoFinal(precoFinal);
 		this.setQuantFotos(quantFotos);
 		this.setHoras(horas);
 	}
 
-	public String getPrecoFinal() {
+	public double getPrecoFinal() {
 		return this.PrecoFinal;
 	}
 
-	public void setPrecoFinal(String precoFinal) {
+	public void setPrecoFinal(double precoFinal) {
 		this.PrecoFinal = precoFinal;
 	}
 
-	public String getQuantFotos() {
+	public int getQuantFotos() {
 		return this.QuantFotos;
 	}
 
-	public void setQuantFotos(String quantFotos) {
+	public void setQuantFotos(int quantFotos) {
 		this.QuantFotos = quantFotos;
 	}
 
-	public String getHoras() {
+	public int getHoras() {
 		return this.Horas;
 	}
 
-	public void setHoras(String horas) {
+	public void setHoras(int horas) {
 		this.Horas = horas;
 	}
 	
