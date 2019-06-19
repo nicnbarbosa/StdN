@@ -2,6 +2,7 @@ package StudioN;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class main {
 
@@ -9,16 +10,21 @@ public class main {
 	static Fotografo fotografo;
 	static Cliente cliente;
 	static Produto produto;
+	static Contrato contrato;
+	static Date data;
     static Scanner dado = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 
 		fotografo = new Fotografo();
 		cliente = new Cliente();
+		produto = new Produto();
+		contrato = new Contrato();
+		data = new Date();
 		
 		CadastroCliente();
 		CadastroFotografo();
-		//Contrato(f, c, p);
+		Contrato(contrato, fotografo, cliente, produto, data);
 	}
 	
 	private static String nomeC;
@@ -189,21 +195,19 @@ public class main {
 		produto = new Produto();
 		produto.setQuantFotos(quantFotos);
 		produto.setHoras(horasUsadas);
+		
+		System.out.println("DADOS CADASTRADOS");
+		System.out.println();
+		System.out.println("- Quantidade de fotos: " + produto.getQuantFotos());
+		System.out.println("- Horas usadas para a sessão: " + produto.getHoras());
 	}
 	
 	// ===================================================================================================================================//
 	
 
-	public static void Contrato(Fotografo f, Cliente c, Produto p) {
-
-		System.out.println("Contrato");
-		System.out.println();
-		System.out.println("- Dados do Fotógrafo: ");
-		f.ExibirDadosFotografo();
-		System.out.println("- Dados do Cliente: ");
-		c.ExibirDadosCliente();
-		System.out.println("- Dados do Pacote: ");
-		p.ExibirDadosProduto();
-
+	public static void Contrato(Contrato cn, Fotografo f, Cliente cl, Produto p, Date d) {
+		
+		cn.DadosContrato(f, cl, p, d);
 	}
+	
 }

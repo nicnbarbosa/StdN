@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class Contrato {
 
-	private Cliente cliente;
 	private Fotografo fotografo;
+	private Cliente cliente;
 	private Produto produto;
 	private Date data;
 
@@ -41,9 +41,26 @@ public class Contrato {
 		this.data = data;
 	}
 
-	public void DadosContrato() {
+	public Date MostrarDataAtual() {
+		Date data = new Date();
+		System.out.println(data);
+		return data;
+	}
+	
+	public void DadosContrato(Fotografo f, Cliente c, Produto p, Date d) {
+		System.out.println("Contrato");
+		System.out.println();
+		System.out.println("- Dados do Fotógrafo: ");
+		f.ExibirDadosFotografo();
+		System.out.println("- Dados do Cliente: ");
+		c.ExibirDadosCliente();
+		System.out.println("- Dados do Pacote: ");
+		p.ExibirDadosProduto();
+		System.out.println("- Preço Final: ");
+		p.ExibirPrecoFinal();
+		System.out.println("- Data: ");
+		this.MostrarDataAtual();
 		
-
 	}
 
 }
