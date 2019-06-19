@@ -1,6 +1,6 @@
 package StudioN;
 
-public class Produto extends Fotografo {
+public class Produto{
 
 	private double PrecoFinal;
 	private int QuantFotos;
@@ -41,7 +41,7 @@ public class Produto extends Fotografo {
 	}
 
 	public void CalcularPrecoFinal(double precoFoto, double precoHora, double quantFotos, int horas) {
-		double precoFinal = (precoFoto * quantFotos) + (precoHora * horas);
+		double precoFinal = (double)(precoFoto * quantFotos) + (double)(precoHora * horas);
 		this.PrecoFinal = precoFinal;
 	}
 

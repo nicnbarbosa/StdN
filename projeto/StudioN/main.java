@@ -41,7 +41,6 @@ public class main {
 		String linha;
 		linha = arqLeiLogico.readLine();
 		while (linha != null) {
-			System.out.println(linha);
 			linha = arqLeiLogico.readLine();
 		}
 

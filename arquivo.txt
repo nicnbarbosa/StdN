@@ -1,2 +1,2 @@
-| Código do fotógrafo | | Modalidades |      | Dias da semana disponíveis | | Preço por foto | | Preço por hora | | Código do cliente | | Preço final | | Quantidade de fotos | | Quantidade de horas |
-                    123 Pre-wedding          Segunda-Terça                                 8.0               20.0                 456             0.0                     20                      5
+| Código do fotógrafo | | Modalidades |      | Dia da semana disponível | | Preço por foto | | Preço por hora | | Código do cliente | | Preço final | | Quantidade de fotos | | Quantidade de horas |
+                    123 fspkdpk              psdpds                                        4.0               56.0                 456             0.0                      4                      4

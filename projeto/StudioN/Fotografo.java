@@ -70,8 +70,8 @@ public class Fotografo extends Pessoa {
 		System.out.println("Código: " + this.getCodFotografo());
 		System.out.println("Modalidades: " + this.getModalidades());
 		System.out.println("Dias da semana disponíveis: " + this.getDiasDaSemanaDisponiveis());
-		System.out.println("- Preço por foto: " + this.getPrecoFoto());
-		System.out.println("- Preço por hora: " + this.getPrecoHora());
+		System.out.println("Preço por foto: R$ " + this.getPrecoFoto());
+		System.out.println("Preço por hora: R$ " + this.getPrecoHora());
 		System.out.println();
 
 	}
@@ -127,7 +127,7 @@ public class Fotografo extends Pessoa {
 		modalidade = dado.nextLine();
 		System.out.println();
 		System.out.println("|--------------------------------------------|");
-		System.out.println("| Informe o dia disponível   |");
+		System.out.println("| Informe o dia disponível:                  |");
 		System.out.println("|--------------------------------------------|");
 		diasDisponiveis = dado.nextLine();
 		System.out.println();
