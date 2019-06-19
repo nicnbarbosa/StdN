@@ -34,6 +34,31 @@ public class Contrato  {
 		this.data = data;
 	}
 	
-
+	public void DadosContrato () {
+		Fotografo fotografo = new Fotografo();
+		System.out.println("================================================");
+		System.out.println("              DADOS DO CONTRATO                 ");
+		System.out.println("------------------------------------------------");
+		System.out.println("FOTÓGRAFO                                       ");
+		System.out.println("------------------------------------------------");
+		System.out.println(fotografo.ExibirDadosFotografo());
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

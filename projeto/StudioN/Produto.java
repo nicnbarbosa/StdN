@@ -59,8 +59,20 @@ public class Produto extends Fotografo {
 		this.Horas = horas;
 	}
 	
-	public void ExibirDadosIniciai
-	public void CalcularPrecoFinal () {
-		
+	public void ExibirDadosProduto () {
+		System.out.println("Preço por foto: " + this.PrecoFoto);
+		System.out.println("Preço por hora: " + this.PrecoHora);
+		System.out.println("Quantidade de fotos: " + this.QuantFotos);
+		System.out.println("Horas usadas: " + this.Horas);
 	}
+	
+	public double CalcularPrecoFinal (double precoFoto, double precoHora, double quantFotos, int horas) {
+		double precoFinal = (precoFoto * quantFotos) + (precoHora * horas);	
+		return precoFinal;
+	}
+	
+	public void ExibirPrecoFinal (double precoFinal) {
+		System.out.println("PREÇO FINAL -----> " + this.PrecoFinal);
+	}
+	
 }

@@ -28,10 +28,33 @@ public class Cliente extends Pessoa {
 		System.out.println("Telefone: " + this.getTelefone());
 		System.out.println("Email: " + this.getEmail());
 		System.out.println("CPF: " + this.getCPF());
-		System.out.println("RG: " + this.getRG());
 		System.out.println("Código: " + this.getCodCliente());
+		System.out.println("========================================");
+	}
+	
+	public void a () {
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
