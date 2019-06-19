@@ -42,16 +42,12 @@ public class Contrato {
 	}
 
 	public void DadosContrato() {
-		Fotografo fotografo = new Fotografo();
-		Cliente cliente = new Cliente();
-		Produto produto = new Produto();
-		Date data = new Date();
 		System.out.println("================================================");
 		System.out.println("              DADOS DO CONTRATO                 ");
 		System.out.println("------------------------------------------------");
 		System.out.println("FOTÓGRAFO                                       ");
 		System.out.println();
-		System.out.println(fotografo.ExibirDadosFotografo());
+		System.out.println(fotografo.);
 		System.out.println("------------------------------------------------");
 		System.out.println("CLIENTE                                         ");
 		System.out.println();

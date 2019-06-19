@@ -63,9 +63,7 @@ public class Fotografo extends Pessoa {
 	}
 
 	public void ExibirDadosFotografo() {
-		System.out.println("========================================");
-		System.out.println("FOTÓGRAFO");
-		System.out.println("----------------------------------------");
+		System.out.println();
 		System.out.println("Nome: " + this.getNome());
 		System.out.println("Telefone: " + this.getTelefone());
 		System.out.println("Email: " + this.getEmail());
@@ -74,8 +72,8 @@ public class Fotografo extends Pessoa {
 		System.out.println("Histórico de Projetos: " + this.getHistoricoProjetos());
 		System.out.println("Horas Trabalhadas: " + this.getHorasTrabalhadas());
 		System.out.println("Dias da semana disponíveis: " + this.getDiasDaSemanaDisponiveis());
-		System.out.println("========================================");
-
+		System.out.println();
+		
 	}
 
 }
