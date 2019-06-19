@@ -8,13 +8,15 @@ public class Fotografo extends Pessoa {
 	private ArrayList<String> Modalidades;
 	private String HistoricoProjetos;
 	private String HorasTrabalhadas;
-	private String DiasDaSemanaDisponiveis;
+	private ArrayList<String> DiasDaSemanaDisponiveis;
+	private String PrecoFoto;
+	private String PrecoHora;
 
 	public Fotografo() {
 		super();
 	}
 
-	public Fotografo(String codFoto, ArrayList<String> modalidades, String projetos, String horas, String dias) {
+	public Fotografo(String codFoto, ArrayList<String> modalidades, String projetos, String horas, ArrayList<String> dias) {
 		this.setCodFotografo(codFoto);
 		this.setModalidades(modalidades);
 		this.setHistoricoProjetos(projetos);
@@ -22,11 +24,11 @@ public class Fotografo extends Pessoa {
 		this.setDiasDaSemanaDisponiveis(dias);
 	}
 
-	public String getDiasDaSemanaDisponiveis() {
+	public ArrayList<String> getDiasDaSemanaDisponiveis() {
 		return this.DiasDaSemanaDisponiveis;
 	}
 
-	public void setDiasDaSemanaDisponiveis(String diasDaSemanaDisponiveis) {
+	public void setDiasDaSemanaDisponiveis(ArrayList<String> diasDaSemanaDisponiveis) {
 		this.DiasDaSemanaDisponiveis = diasDaSemanaDisponiveis;
 	}
 
@@ -60,6 +62,21 @@ public class Fotografo extends Pessoa {
 
 	public void setHorasTrabalhadas(String horasTrabalhadas) {
 		this.HorasTrabalhadas = horasTrabalhadas;
+	}
+	public String getPrecoFoto() {
+		return this.PrecoFoto;
+	}
+
+	public void setPrecoFoto(String precoFoto) {
+		this.PrecoFoto = precoFoto;
+	}
+
+	public String getPrecoHora() {
+		return this.PrecoHora;
+	}
+
+	public void setPrecoHora(String precoHora) {
+		this.PrecoHora = precoHora;
 	}
 
 	public void ExibirDadosFotografo() {

@@ -42,27 +42,7 @@ public class Contrato {
 	}
 
 	public void DadosContrato() {
-		System.out.println("================================================");
-		System.out.println("              DADOS DO CONTRATO                 ");
-		System.out.println("------------------------------------------------");
-		System.out.println("FOTÓGRAFO                                       ");
-		System.out.println();
-		System.out.println(fotografo.ExibirDadosFotografo());
-		System.out.println("------------------------------------------------");
-		System.out.println("CLIENTE                                         ");
-		System.out.println();
-		System.out.println(cliente.ExibirDadosCliente());
-		System.out.println("------------------------------------------------");
-		System.out.println("PRODUTO                                         ");
-		System.out.println();
-		System.out.println(produto.ExibirDadosProduto());
-		System.out.println(produto.ExibirPrecoFinal());
-		System.out.println("------------------------------------------------");
-		System.out.println("DATA E HORÁRIO");
-		System.out.println();
-		System.out.println("Data: ");
-		System.out.println("Hora: " + data.getTime());
-		System.out.println("================================================");
+		
 
 	}
 

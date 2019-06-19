@@ -2,8 +2,6 @@ package StudioN;
 
 public class Produto extends Fotografo {
 
-	private String PrecoFoto;
-	private String PrecoHora;
 	private String PrecoFinal;
 	private String QuantFotos;
 	private String Horas;
@@ -12,9 +10,7 @@ public class Produto extends Fotografo {
 		super();
 	}
 	
-	public Produto (String precoFoto, String precoHora, String precoFinal, String quantFotos, String horas) {
-		this.setPrecoFoto(precoFoto);
-		this.setPrecoHora(precoHora);
+	public Produto (String precoFinal, String quantFotos, String horas) {
 		this.setPrecoFinal(precoFinal);
 		this.setQuantFotos(quantFotos);
 		this.setHoras(horas);
@@ -28,21 +24,6 @@ public class Produto extends Fotografo {
 		this.PrecoFinal = precoFinal;
 	}
 
-	public String getPrecoFoto() {
-		return this.PrecoFoto;
-	}
-
-	public void setPrecoFoto(String precoFoto) {
-		this.PrecoFoto = precoFoto;
-	}
-
-	public String getPrecoHora() {
-		return this.PrecoHora;
-	}
-
-	public void setPrecoHora(String precoHora) {
-		this.PrecoHora = precoHora;
-	}
 	public String getQuantFotos() {
 		return this.QuantFotos;
 	}
@@ -60,8 +41,6 @@ public class Produto extends Fotografo {
 	}
 	
 	public void ExibirDadosProduto () {
-		System.out.println("Preço por foto: " + this.PrecoFoto);
-		System.out.println("Preço por hora: " + this.PrecoHora);
 		System.out.println("Quantidade de fotos: " + this.QuantFotos);
 		System.out.println("Horas usadas: " + this.Horas);
 	}
