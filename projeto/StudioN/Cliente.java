@@ -3,12 +3,12 @@ package StudioN;
 public class Cliente extends Pessoa {
 
 	private String CodCliente;
-	
-	public Cliente () {
+
+	public Cliente() {
 		super();
 	}
-	
-	public Cliente (String codCliente) {
+
+	public Cliente(String codCliente) {
 		this.setCodCliente(codCliente);
 	}
 
@@ -31,30 +31,5 @@ public class Cliente extends Pessoa {
 		System.out.println("Código: " + this.getCodCliente());
 		System.out.println("========================================");
 	}
-	
-	public void a () {
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

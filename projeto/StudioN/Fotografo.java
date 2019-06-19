@@ -5,16 +5,16 @@ import java.util.ArrayList;
 public class Fotografo extends Pessoa {
 
 	private String CodFotografo;
-	private ArrayList <String> Modalidades;
+	private ArrayList<String> Modalidades;
 	private String HistoricoProjetos;
 	private String HorasTrabalhadas;
 	private String DiasDaSemanaDisponiveis;
-	
-	public Fotografo () {
+
+	public Fotografo() {
 		super();
 	}
-	
-	public Fotografo (String codFoto, ArrayList <String> modalidades, String projetos, String horas, String dias) {
+
+	public Fotografo(String codFoto, ArrayList<String> modalidades, String projetos, String horas, String dias) {
 		this.setCodFotografo(codFoto);
 		this.setModalidades(modalidades);
 		this.setHistoricoProjetos(projetos);
@@ -62,11 +62,11 @@ public class Fotografo extends Pessoa {
 		this.HorasTrabalhadas = horasTrabalhadas;
 	}
 
-	public void ExibirDadosFotografo () {
+	public void ExibirDadosFotografo() {
 		System.out.println("========================================");
 		System.out.println("FOTÓGRAFO");
 		System.out.println("----------------------------------------");
-		System.out.println("Nome: "+this.getNome());
+		System.out.println("Nome: " + this.getNome());
 		System.out.println("Telefone: " + this.getTelefone());
 		System.out.println("Email: " + this.getEmail());
 		System.out.println("Código: " + this.getCodFotografo());
@@ -75,11 +75,7 @@ public class Fotografo extends Pessoa {
 		System.out.println("Horas Trabalhadas: " + this.getHorasTrabalhadas());
 		System.out.println("Dias da semana disponíveis: " + this.getDiasDaSemanaDisponiveis());
 		System.out.println("========================================");
-		
+
 	}
-	
-	
-	
-	
-	
+
 }

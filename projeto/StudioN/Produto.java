@@ -71,7 +71,7 @@ public class Produto extends Fotografo {
 		return precoFinal;
 	}
 	
-	public void ExibirPrecoFinal (double precoFinal) {
+	public void ExibirPrecoFinal () {
 		System.out.println("PREÇO FINAL -----> " + this.PrecoFinal);
 	}
 	
